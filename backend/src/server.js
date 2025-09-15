@@ -8,7 +8,9 @@ app.use(express.json());
 
 // Importar as rotas
 const productRoutes = require('./routes/productRoutes');
+const mercadopagoController = require('./controllers/mercadopagoController');
 app.use('/api/products', productRoutes);
+app.post('/api/mercadopago/preference', mercadopagoController.createPreference);
 
 // Exemplo de conexão com MySQL usando mysql2
 const sequelize = require('./config/database');
