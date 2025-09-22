@@ -1,17 +1,25 @@
+require('dotenv').config();
 const mercadopago = require('mercadopago');
 
-// Configure sua chave de acesso
 mercadopago.configure({
   access_token: process.env.MERCADOPAGO_ACCESS_TOKEN
 });
 
-// Cria uma preferência de pagamento
 exports.createPreference = async (req, res) => {
   try {
     const { items } = req.body;
     const preference = {
-      items: items,
-      // ...adicione outras configurações se necessário...
+      id: '1',
+      title: 'Camisa de rua',
+      description: 'Camisa de rua - Oversized',
+      quantity: 1,
+      currency_id: 'BRL',
+      unit_price: 27.00,
+      back_urls: {
+        success: 'https://test.com/success', // URL de teste, precisamos substituir
+        failure: 'https://test.com/failure', // URL de teste, precisamos substituir
+        pending: 'https://test.com/pending', // URL de teste, precisamos substituir
+      }
     };
 
     const response = await mercadopago.preferences.create(preference);
