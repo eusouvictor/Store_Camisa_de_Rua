@@ -1,26 +1,44 @@
 {
   "name": "store_camisa_de_rua",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "expo/AppEntry.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "expo start -c",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eusouvictor/Store_Camisa_de_Rua.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eusouvictor/Store_Camisa_de_Rua/issues"
-  },
-  "homepage": "https://github.com/eusouvictor/Store_Camisa_de_Rua#readme",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.1",
-    "express": "^5.1.0",
-    "mongoose": "^8.18.0"
-  }
+"dependencies": {
+  "expo": "^51.0.0",
+  "expo-status-bar": "~1.12.1",
+  "react": "18.2.0",
+  "react-native": "0.74.0",
+  "@react-navigation/native": "^7.1.17",
+  "@react-navigation/native-stack": "^7.3.26",
+  "@react-navigation/stack": "^7.4.8",
+  "@tsconfig/react-native": "^3.0.7",
+  "cors": "^2.8.5",
+  "dotenv": "^17.2.1",
+  "expo-font": "~14.0.8",
+  "expo-image": "~3.0.8",
+  "expo-router": "~6.0.7",
+  "expo-splash-screen": "~31.0.10",
+  "express": "^5.1.0",
+  "mongoose": "^8.18.0",
+"homepage": "https://github.com/eusouvictor/Store_Camisa_de_Rua#readme",
+  "react-dom": "19.1.0",
+  "react-native-gesture-handler": "~2.28.0",
+  "react-native-get-random-values": "~1.11.0",
+  "react-native-reanimated": "~4.1.0",
+  "react-native-safe-area-context": "~5.6.0",
+  "react-native-screens": "~4.16.0",
+  "react-native-vector-icons": "^10.3.0",
+  "react-native-web": "^0.21.0"
+},
+"devDependencies": {
+  "@types/jest": "^30.0.0",
+  "@types/react": "^19.1.13",
+  "@types/react-native": "^0.72.8",
+  "typescript": "^5.9.2"
+}
 }
